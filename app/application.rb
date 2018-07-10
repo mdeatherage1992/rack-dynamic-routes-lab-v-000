@@ -8,7 +8,7 @@ class Application
       @@items.each do |item|
         resp.write "#{item.price}\n"
     end
-    if req.path=="/items"
+  elsif req.path=="/items"
       resp.write "You requested the items"
     else
       resp.write "Route not found"

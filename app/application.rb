@@ -10,7 +10,6 @@ class Application
       else
         resp.write "Item not found"
       end
-    end
     if req.path=="/items"
       resp.write "You requested the items"
     else

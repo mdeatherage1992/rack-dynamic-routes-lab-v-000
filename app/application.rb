@@ -5,8 +5,11 @@ class Application
     req = Rack::Request.new(env)
 
     if req.path.match(/items/)
-      @@items.each do |item|
-        resp.write "#{item.price}\n"
+    item = req.path.split("/items/").last
+      if !item
+        resp write "Item not found"
+      else
+        resp.write "#{item.price}"
     end
   elsif req.path=="/items"
       resp.write "You requested the items"

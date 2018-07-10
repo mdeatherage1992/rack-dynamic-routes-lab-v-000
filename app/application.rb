@@ -7,6 +7,7 @@ class Application
     if req.path.match(/items/)
     item = req.path.split("/items/").last
       if !item
+        resp.status = 400
         resp write "Item not found"
       else
         resp.write "#{item.price}"

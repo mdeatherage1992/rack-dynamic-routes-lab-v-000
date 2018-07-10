@@ -9,7 +9,7 @@ class Application
       if item = @@items.find{|i| i.name == item}
         resp.write item.price
       else
-        resp.stauts = 400
+        resp.status = 400
         resp.write "Item not found"
     end
   elsif req.path=="/items"

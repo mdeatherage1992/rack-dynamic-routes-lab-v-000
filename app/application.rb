@@ -11,6 +11,8 @@ class Application
         resp.write "Item not found"
       end
     end
+  end
+
     elsif req.path=="/items"
       resp.write "You requested the items"
     else

@@ -12,8 +12,7 @@ class Application
       end
     end
   end
-
-    elsif req.path=="/items"
+    if req.path=="/items"
       resp.write "You requested the items"
     else
       resp.write "Route not found"

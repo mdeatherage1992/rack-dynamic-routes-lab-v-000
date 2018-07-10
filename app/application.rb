@@ -7,9 +7,6 @@ class Application
     if req.path.match(/items/)
       @@items.each do |item|
         resp.write "#{item.price}\n"
-      else
-        resp.write "Item not found"
-      end
     end
     if req.path=="/items"
       resp.write "You requested the items"
